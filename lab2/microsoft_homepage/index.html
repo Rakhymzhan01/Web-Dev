@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft – Cloud, Computers, Apps & Gaming</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #000;
+        }
+
+        /* Header Styles */
+        .header {
+            padding: 0 5%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo img {
+            width: 30px;
+            padding: ;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #262626;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            background: url('https://www.microsoft.com/image-asset-placeholder') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 50%;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+        }
+
+        .hero-content h1 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #0067b8;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+
+        .cta-button:hover {
+            background: #00529f;
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            padding: 48px 5%;
+        }
+
+        .product-card {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            font-size: 15px;
+            margin-bottom: 16px;
+        }
+
+        .product-link {
+            color: #0067b8;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .product-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #f9f9f9;
+            padding: 48px 5%;
+            color: #606770;
+            border-top: 1px solid #eaeaea;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 24px;
+        }
+
+        .footer-column h4 {
+            font-size: 15px;
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #0078d4;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hero-content {
+                max-width: 70%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-content {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="header">
+    <div class="nav-left">
+        <div class="logo">
+            <img src="https://www.microsoft.com/favicon.ico" alt="Microsoft">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Microsoft 365</a></li>
+            <li><a href="#">Teams</a></li>
+            <li><a href="#">Windows</a></li>
+            <li><a href="#">Surface</a></li>
+            <li><a href="#">Xbox</a></li>
+            <li><a href="#">Support</a></li>
+        </ul>
+    </div>
+    <div class="nav-right">
+        <ul class="nav-links">
+            <li><a href="#">All Microsoft</a></li>
+            <li><a href="#">Search</a></li>
+            <li><a href="#">Cart</a></li>
+            <li><a href="#">Sign in</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Microsoft 365</h1>
+            <p>Turn your ideas into reality, stay safer online and off, and focus on what matters most with Microsoft 365 apps.</p>
+            <a href="#" class="cta-button">For one person</a>
+        </div>
+    </section>
+    <section class="hero" style="background: url('./Xbox-Series.avif') center/cover no-repeat;">
+        <div class="hero-content">
+            <h1>Experience Xbox Series S</h1>
+            <p>The fastest and most powerful Xbox ever. Explore the next level of gaming.</p>
+            <a href="#" class="cta-button">Learn more</a>
+        </div>
+    </section>
+
+    <section class="product-grid">
+        <div class="product-card">
+            <img src="./Content-Card-Surface-Laptop-7-Pro-11-Platinum-Black-MB001.avif" alt="Surface Laptop 5">
+            <h3>Copilot+ PCs for Business</h3>
+            <p>Surface Pro for Business and Surface Laptop for Business unlock new AI-accelerated features like Windows Studio Effects.</p>
+            <a href="#" class="product-link">Shop Surface Pro for Business<i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="product-card">
+            <img src="./Content-Card-Microsoft-Teams-Commercial-Meeting.avif" alt="Xbox Series X">
+            <h3>Microsoft 365 Copilot</h3>
+            <p>Save time and focus on the things that matter most with AI in Microsoft 365 for business.</p>
+            <a href="#" class="product-link">Learn more<i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="product-card">
+            <img src="./Content-Card-Microsoft-Teams-Commercial-Meeting.avif" alt="Microsoft 365">
+            <h3>Get Microsoft Teams for your business</h3>
+            <p>Online meetings, chat, real-time collaboration, and shared cloud storage—all in one place.</p>
+            <a href="#" class="product-link">Find the right plan for your business <i class="fas fa-chevron-right"></i></a>
+        </div>
+        <div class="product-card">
+            <img src="./Content-Card-Azure-AI-Bloom.jpeg" alt="Small Business">
+            <h3>Join era of AI </h3>
+            <p>Create, communicate, and code with the latest Microsoft AI solutions.</p>
+            <a href="#" class="product-link">Explore AI solutions<i class="fas fa-chevron-right"></i></a>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-column">
+            <h4>What's new</h4>
+            <ul class="footer-links">
+                <li><a href="#">Surface Pro 9</a></li>
+                <li><a href="#">Surface Laptop 5</a></li>
+                <li><a href="#">Surface Studio 2+</a></li>
+                <li><a href="#">Surface Laptop Go 2</a></li>
+                <li><a href="#">Surface Laptop Studio</a></li>
+                <li><a href="#">Surface Go 3</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Microsoft Store</h4>
+            <ul class="footer-links">
+                <li><a href="#">Account profile</a></li>
+                <li><a href="#">Download Center</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Order tracking</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Education</h4>
+            <ul class="footer-links">
+                <li><a href="#">Microsoft in education</a></li>
+                <li><a href="#">Devices for education</a></li>
+                <li><a href="#">Microsoft Teams for Education</a></li>
+                <li><a href="#">Microsoft 365 Education</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Business</h4>
+            <ul class="footer-links">
+                <li><a href="#">Microsoft Cloud</a></li>
+                <li><a href="#">Microsoft Security</a></li>
+                <li><a href="#">Azure</a></li>
+                <li><a href="#">Dynamics 365</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Developer & IT</h4>
+            <ul class="footer-links">
+                <li><a href="#">Developer Center</a></li>
+                <li><a href="#">Documentation</a></li>
+                <li><a href="#">Microsoft Learn</a></li>
+                <li><a href="#">Microsoft Tech Community</a></li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h4>Company</h4>
+            <ul class="footer-links">
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About Microsoft</a></li>
+                <li><a href="#">Company news</a></li>
+                <li><a href="#">Privacy at Microsoft</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-bottom-left">
+            <span>English (United States)</span>
+            <span>© Microsoft 2025</span>
+        </div>
+        <div class="footer-bottom-right">
+            <a href="#" class="footer-link">Contact Microsoft</a>
+            <a href="#" class="footer-link">Privacy</a>
+            <a href="#" class="footer-link">Terms of use</a>
+            <a href="#" class="footer-link">Trademarks</a>
+            <a href="#" class="footer-link">About our ads</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
