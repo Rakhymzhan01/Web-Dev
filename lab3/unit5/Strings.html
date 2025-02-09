@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<script>
+    function ucFirst(str) {
+        if (!str) return ""; // Check if the string is empty
+        return str[0].toUpperCase() + str.slice(1); // Uppercase the first character and append the rest
+    }
+
+    alert(ucFirst("john")); // Output: "John"
+    alert(ucFirst("hello")); // Output: "Hello"
+    alert(ucFirst("")); // Output: ""
+    alert(ucFirst("world")); // Output: "World"
+</script>
