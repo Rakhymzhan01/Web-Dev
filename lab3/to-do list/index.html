@@ -150,12 +150,10 @@
 </div>
 
 <script>
-    // Load tasks from localStorage when the page loads
     document.addEventListener('DOMContentLoaded', () => {
         loadTasks();
     });
 
-    // Handle Enter key press
     document.getElementById('taskInput').addEventListener('keypress', (e) => {
         if (e.key === 'Enter') {
             addTask();
@@ -172,7 +170,6 @@
                 text: text,
                 completed: false
             };
-
             saveTask(task);
             renderTask(task);
             input.value = '';
