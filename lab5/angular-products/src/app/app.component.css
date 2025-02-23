@@ -14,7 +14,7 @@
     flex-direction: column;
   }
   
-  /* Navbar styles */
+  /* Navbar styles */ 
   .navbar {
     background-color: var(--white);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
