@@ -9,7 +9,6 @@ import { ProductsComponent } from './products/products.component';
   standalone: true,
   imports: [
     CommonModule,
-    ProductsComponent
   ],
   templateUrl: './app.component.html',
   template: `<p>The user's occupation is {{occupation}}</p>`,
