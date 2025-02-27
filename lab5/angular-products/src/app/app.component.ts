@@ -1,76 +1,33 @@
-// app.component.ts
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ProductListComponent } from './products/product-list/product-list.component';
-import { Category, Product } from './products/product.model';
+import { HeaderComponent } from './components/header/header.component';
+import { ProductsListComponent } from './pages/product-list/product-list.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ProductListComponent],
+  imports: [HeaderComponent, ProductsListComponent, RouterOutlet],
   template: `
-    <div class="app-container">
-      <nav class="navbar">
-        <h1>TechStore</h1>
-      </nav>
+    <div class="min-h-screen flex flex-col bg-gray-50">
+      <app-header (categorySelected)="changeCategory($event)"></app-header>
 
-      <div class="categories">
-        <button 
-          *ngFor="let category of categories"
-          (click)="selectCategory(category)"
-          [class.active]="selectedCategory?.id === category.id"
-          class="category-btn">
-          {{ category.name }}
-        </button>
-      </div>
+      <main class="flex-1 container mx-auto px-4 py-6">
+        <app-products-list [selectedCategory]="selectedCategory"/>
+      </main>
 
-      <app-product-list
-        *ngIf="selectedCategory"
-        [products]="selectedCategory.products"
-        (remove)="removeProduct($event)"
-        (like)="likeProduct($event)">
-      </app-product-list>
+      <footer class="bg-gray-800 text-white text-center py-4 mt-8">
+        <p class="text-sm">&copy; 2024 TechStore. All rights reserved.</p>
+      </footer>
+
+      <router-outlet/>
     </div>
   `,
-  styleUrls: ['./app.component.css']
+  styles: [],
 })
 export class AppComponent {
-  categories: Category[] = [
-    {
-      id: 1,
-      name: 'Smartphones',
-      products: [
-        {
-          id: 1,
-          name: 'iPhone 15 Pro Max',
-          description: 'Apple iPhone 15 Pro Max 256GB Natural Titanium',
-          rating: 5,
-          price: 699990,
-          images: ['url1', 'url2', 'url3'],
-          kaspiLink: 'link',
-          currentImageIndex: 0,
-          likes: 0
-        },
-        // Add more products...
-      ]
-    },
-    // Add more categories...
-  ];
+  selectedCategory = 'All';
 
-  selectedCategory: Category | null = null;
-
-  selectCategory(category: Category) {
+  changeCategory(category: string) {
     this.selectedCategory = category;
-  }
-
-  removeProduct(product: Product) {
-    if (this.selectedCategory) {
-      this.selectedCategory.products = this.selectedCategory.products
-        .filter(p => p.id !== product.id);
-    }
-  }
-
-  likeProduct(product: Product) {
-    product.likes++;
   }
 }
