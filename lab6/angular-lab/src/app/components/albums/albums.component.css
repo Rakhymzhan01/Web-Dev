@@ -1,0 +1,49 @@
+.albums-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .albums-list {
+    margin-top: 20px;
+  }
+  
+  .album-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  .album-title {
+    flex: 1;
+    cursor: pointer;
+    color: #0066cc;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .album-title:hover {
+    text-decoration: underline;
+  }
+  
+  .delete-btn {
+    background-color: #ff3333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .delete-btn:hover {
+    background-color: #cc0000;
+  }
+  
+  .loading {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+  }
