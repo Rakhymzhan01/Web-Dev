@@ -1,0 +1,23 @@
+@if (album()) {
+<div class="album-detail">
+  <h2>Album Details</h2>
+  <p><strong>ID:</strong> {{ album()?.id }}</p>
+
+  <label class="album-label">
+    <strong>Title:</strong>
+    <input [value]="editedTitle()" (input)="onTitleChange($event)" type="text" />
+  </label>
+
+  <div class="buttons">
+
+    <button (click)="goBack()">Return</button>
+    <div class="buttons-wrap">
+      <button (click)="saveChanges()">Save</button>
+      <a [routerLink]="['/albums', album()?.id, 'photos']">Photos</a>
+    </div>
+  </div>
+</div>
+
+} @else {
+<p>Loading album</p>
+}
